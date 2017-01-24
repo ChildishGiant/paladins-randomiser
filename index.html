@@ -1,0 +1,23 @@
+<html>
+  <head>
+		<title>paladins-randomiser</title>
+
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link async rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script async type="text/javascript" src="jssource.js"></script>
+  </head>
+  <body>
+
+    <label><input type="checkbox" id="frontlines" onclick="randomise();" checked>Frontlines</label>
+    <label><input type="checkbox" id="damage" onclick="randomise();" checked>Damage</label>
+    <label><input type="checkbox" id="support" onclick="randomise();" checked>Support</label>
+    <label><input type="checkbox" id="flank" onclick="randomise();" checked>Flank</label>
+
+    <button onclick="randomise();">Roll</button>
+
+    <div id="answer"></div>
+    <img src="" id="profile">
+
+  </body>
+</html>
