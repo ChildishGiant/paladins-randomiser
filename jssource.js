@@ -3,7 +3,8 @@ champions = {
     ["Barik",
     "Fernando",
     "Makoa",
-    "Ruckus"],
+    "Ruckus",
+    "Torvald"],
 
   "damage":
     ["Bomb King",
