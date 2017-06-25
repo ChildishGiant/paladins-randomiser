@@ -1,7 +1,9 @@
 champions = {
   "frontlines":
-    ["Barik",
+    ["Ash",
+    "Barik",
     "Fernando",
+    "Inara",
     "Makoa",
     "Ruckus",
     "Torvald"],
@@ -13,20 +15,25 @@ champions = {
     "Kinessa",
     "Sha Lin",
     "Tyra",
-    "Viktor"],
+    "Viktor",
+    "Willo"],
 
   "support":
     ["Grohk",
     "Grover",
     "Mal'Damba",
     "Pip",
+    "Seris",
     "Ying"],
 
   "flank":
     ["Androxus",
     "Buck",
     "Evie",
-    "Skye"],
+    "Lex",
+    "Maeve",
+    "Skye",
+    "Zhin"],
 };
 
 function randomise(){
