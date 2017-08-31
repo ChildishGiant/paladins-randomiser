@@ -16,6 +16,8 @@ champions = {
     "Sha Lin",
     "Tyra",
     "Viktor",
+    "Strix",
+    "Lian",
     "Willo"],
 
   "support":
@@ -24,7 +26,8 @@ champions = {
     "Mal'Damba",
     "Pip",
     "Seris",
-    "Ying"],
+    "Ying",
+    "Jenos"],
 
   "flank":
     ["Androxus",
