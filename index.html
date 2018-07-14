@@ -3,21 +3,29 @@
 		<title>paladins-randomiser</title>
 
 		<meta name=viewport content="width=device-width, initial-scale=1">
-		<link async rel="stylesheet" type="text/css" href="style.css">
+		<link async rel="stylesheet" type="text/css" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script async type="text/javascript" src="jssource.js"></script>
   </head>
   <body>
 
-    <label><input type="checkbox" id="frontlines" onclick="randomise();" checked>Frontlines</label>
-    <label><input type="checkbox" id="damage" onclick="randomise();" checked>Damage</label>
-    <label><input type="checkbox" id="support" onclick="randomise();" checked>Support</label>
-    <label><input type="checkbox" id="flank" onclick="randomise();" checked>Flank</label>
+    <div id="box">
 
-    <button onclick="randomise();">Roll</button>
+      <input type="checkbox" id="frontlines" onclick="randomise();" checked> <label for="frontlines"> <img src="imgs/Frontlines.svg"/> Frontlines</label>
+      <input type="checkbox" id="damage" onclick="randomise();" checked> <label for="damage"> <img src="imgs/Damage.svg"/> Damage</label>
+      <input type="checkbox" id="support" onclick="randomise();" checked> <label for="support"> <img src="imgs/Support.svg"/> Support</label>
+      <input type="checkbox" id="flank" onclick="randomise();" checked> <label for="flank"> <img src="imgs/Flank.svg"/> Flank</label>
+      <br/>
+      
+      <button onclick="randomise();">Roll</button>
 
-    <div id="answer"></div>
-    <img src="" id="profile">
+      <div id="centered">
+        <span id="answer"></span> 
+        <br/>
+        <img src="" id="profile">
+      </div>
+
+    </div>   
 
   </body>
 </html>
