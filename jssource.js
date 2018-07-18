@@ -40,7 +40,7 @@ champions = {
     "Androxus",
     "Buck",
     "Evie",
-    // "Koga",
+    "Koga",
     "Lex",
     "Maeve",
     "Moji",
