@@ -46,6 +46,7 @@ label > img {
   height: 1.2em;
 }
 
+/* When unchecked, grey out */
 input[type="checkbox"]:not(:checked) + label > img {
   filter: saturate(10%) brightness(70%);
 }
@@ -65,4 +66,8 @@ button {
   vertical-align: middle;
   padding: 1px 1em;
   margin: .5em;
+}
+
+#profile {
+  max-width: 100%;
 }

@@ -1,90 +1,116 @@
-champions = {
-  "frontlines": [
-    "Ash",
-    "Barik",
-    "Fernando",
-    "Inara",
-    "Khan",
-    "Makoa",
-    "Ruckus",
-    "Terminus",
-    "Torvald"
-  ],
+/* globals $ */
 
-  "damage": [
-    "Bomb King",
-    "Cassie",
-    "Drogoz",
-    "Kinessa",
-    "Lian",
-    "Sha Lin",
-    "Strix",
-    "Tyra",
-    "Viktor",
-    "Vivian",
-    "Willo"
-  ],
+const champions = {
+	"frontlines": [
+		"Ash",
+		"Barik",
+		"Fernando",
+		"Inara",
+		"Khan",
+		"Makoa",
+		"Ruckus",
+		"Terminus",
+		"Torvald"
+	],
 
-  "support": [
-    "Furia",
-    "Grohk",
-    "Grover",
-    "Jenos",
-    "Mal'Damba",
-    "Pip",
-    "Seris",
-    "Ying"
-  ],
+	"damage": [
+		"Bomb King",
+		"Cassie",
+		"Dredge",
+		"Drogoz",
+		"Imani",
+		"Kinessa",
+		"Lian",
+		"Sha Lin",
+		"Strix",
+		"Tyra",
+		"Viktor",
+		"Vivian",
+		"Willo"
+	],
 
-  "flank": [
-    "Androxus",
-    "Buck",
-    "Evie",
-    "Koga",
-    "Lex",
-    "Maeve",
-    "Moji",
-    "Skye",
-    "Talus",
-    "Zhin"
-  ],
+	"support": [
+		"Furia",
+		"Grohk",
+		"Grover",
+		"Jenos",
+		"Mal'Damba",
+		"Pip",
+		"Seris",
+		"Ying"
+	],
+
+	"flank": [
+		"Androxus",
+		"Buck",
+		"Evie",
+		"Koga",
+		"Lex",
+		"Maeve",
+		"Moji",
+		"Skye",
+		"Talus",
+		"Zhin"
+	],
 };
 
 function randomise() {
 
-  pool = [];
+	let pool = [];
 
-  $("input").each(function () {
+	$("input").each(function () {
 
-    if (this.checked) {
-      pool = pool.concat(champions[this.id]);
-    };
+		if (this.checked) {
+			pool = pool.concat(champions[this.id]);
+		}
 
-  });
+	});
 
-  //choose a champion from the pool
-  chosen = pool[Math.floor(Math.random() * pool.length)];
-  console.log(chosen);
-  if (chosen === undefined) {
+	// choose a champion from the pool
+	const chosen = pool[Math.floor(Math.random() * pool.length)];
+	console.log(`imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`);
 
-    //Complain that no categories are checked
-    $("#answer").html("You need to select at least one category");
+	switch (chosen) {
 
-    //Set the image to nothing
-    $("#profile").attr("src", "imgs/110px-Champion_None_Icon.png");
+	case undefined:
+		// Complain that no categories are checked
+		$("#answer").html("You need to select at least one category");
 
-  } else {
+		// Set the image to nothing
+		$("#profile").attr("src", "imgs/champs/none.jpg");
+		break;
 
-    //set the text to the correct champion
-    $("#answer").html(chosen);
+	default:
 
-    //setting the image
-    url = "imgs/110px-Champion_" + chosen.replace(/\s+/g, '') + "_Icon.png";
-    $("#profile").attr("src", url);
+		// Set the text to the correct champion
+		$("#answer").html(chosen);
 
-  }
-};
+		// Setting the image
+		$("#profile").attr("src", `imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`);
+		break;
+	}
 
-$(document).ready(function () {
-  randomise();
+
+	// if (chosen === undefined) {
+
+	// 	// Complain that no categories are checked
+	// 	$("#answer").html("You need to select at least one category");
+
+	// 	// Set the image to nothing
+	// 	$("#profile").attr("src", "imgs/110px-Champion_None_Icon.png");
+
+	// } else {
+
+	// 	// Set the text to the correct champion
+	// 	$("#answer").html(chosen);
+
+	// 	// Setting the image
+	// 	const url = `imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`;
+	// 	$("#profile").attr("src", url);
+
+	// }
+}
+
+$(document).ready(() => {
+	randomise();
 });
