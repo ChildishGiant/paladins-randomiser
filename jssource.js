@@ -68,8 +68,6 @@ function randomise() {
 
 	// choose a champion from the pool
 	const chosen = pool[Math.floor(Math.random() * pool.length)];
-	console.log(`imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`);
-
 	switch (chosen) {
 
 	case undefined:
