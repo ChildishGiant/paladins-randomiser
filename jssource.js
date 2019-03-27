@@ -3,6 +3,7 @@
 const champions = {
 	"frontlines": [
 		"Ash",
+		"Atlas",
 		"Barik",
 		"Fernando",
 		"Inara",
