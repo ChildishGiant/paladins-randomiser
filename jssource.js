@@ -1,5 +1,3 @@
-/* globals $ */
-
 const champions = {
 	"frontlines": [
 		"Ash",
@@ -52,19 +50,18 @@ const champions = {
 		"Skye",
 		"Talus",
 		"Zhin"
-	],
+	]
 };
 
 function randomise() {
 
 	let pool = [];
 
-	$("input").each(function () {
+	Array.prototype.forEach.call(document.querySelectorAll("input"), (el, i) => {
 
-		if (this.checked) {
-			pool = pool.concat(champions[this.id]);
+		if (el.checked) {
+			pool = pool.concat(champions[el.id]);
 		}
-
 	});
 
 	// choose a champion from the pool
@@ -73,43 +70,23 @@ function randomise() {
 
 	case undefined:
 		// Complain that no categories are checked
-		$("#answer").html("You need to select at least one category");
+		document.getElementById("answer").innerHTML = "You need to select at least one category";
 
 		// Set the image to nothing
-		$("#profile").attr("src", "imgs/champs/none.jpg");
+		document.getElementById("profile").src = "imgs/champs/none.jpg";
 		break;
 
 	default:
 
 		// Set the text to the correct champion
-		$("#answer").html(chosen);
+		document.getElementById("answer").innerHTML = chosen;
 
 		// Setting the image
-		$("#profile").attr("src", `imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`);
+		document.getElementById("profile").src = `imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`;
 		break;
 	}
-
-
-	// if (chosen === undefined) {
-
-	// 	// Complain that no categories are checked
-	// 	$("#answer").html("You need to select at least one category");
-
-	// 	// Set the image to nothing
-	// 	$("#profile").attr("src", "imgs/110px-Champion_None_Icon.png");
-
-	// } else {
-
-	// 	// Set the text to the correct champion
-	// 	$("#answer").html(chosen);
-
-	// 	// Setting the image
-	// 	const url = `imgs/champs/${chosen.toLowerCase().replace(" ", "-")}.jpg`;
-	// 	$("#profile").attr("src", url);
-
-	// }
 }
 
-$(document).ready(() => {
+(function () {
 	randomise();
-});
+}());
