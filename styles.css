@@ -44,6 +44,7 @@ label {
 
 label > img {
   height: 1.2em;
+  vertical-align: sub;
 }
 
 /* When unchecked, grey out */
@@ -69,5 +70,6 @@ button {
 }
 
 #profile {
+  width: 256px;
   max-width: 100%;
 }

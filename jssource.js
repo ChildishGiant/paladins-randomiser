@@ -36,7 +36,8 @@ const champions = {
 		"Mal'Damba",
 		"Pip",
 		"Seris",
-		"Ying"
+		"Ying",
+		"Io"
 	],
 
 	"flank": [
