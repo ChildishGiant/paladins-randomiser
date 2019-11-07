@@ -7,6 +7,7 @@ const champions = {
 		"Inara",
 		"Khan",
 		"Makoa",
+		"Raum",
 		"Ruckus",
 		"Terminus",
 		"Torvald"
