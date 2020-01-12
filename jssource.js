@@ -23,6 +23,7 @@ const champions = {
 		"Lian",
 		"Sha Lin",
 		"Strix",
+		"Tiberius",
 		"Tyra",
 		"Viktor",
 		"Vivian",
