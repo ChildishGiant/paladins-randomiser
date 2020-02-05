@@ -173,7 +173,10 @@ function randomise () {
 (function () {
 
 	// Load blacklist from cookies
-	blacklist = JSON.parse(getCookie("blacklist"));
+	if (getCookie("blacklist") !== undefined) {
+		blacklist = JSON.parse(getCookie("blacklist"));
+	}
+
 
 	randomise();
 
