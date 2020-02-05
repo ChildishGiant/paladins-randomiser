@@ -21,9 +21,33 @@
       <div id="centered">
         <span id="answer"></span>
         <br/>
-        <img src="" id="profile">
+        <img src="" id="profile" draggable="false">
       </div>
 
+    </div>
+
+    <img id="settings" class="corner" onclick="toggleOverlay()" src="imgs/Settings.svg">
+
+    <div id="overlay">
+
+      <div id="template" class="blacklist" onclick="toggleBlacklist(this)">
+        <img draggable="false">
+      </div>
+
+      <img id="close" class="corner" onclick="toggleOverlay()" src="imgs/Close.svg">
+
+      <div id="frontlines-blacklist" class="category">
+        <h2><img src="imgs/Frontlines.svg"/> Frontlines</h2>
+      </div>
+      <div id="damage-blacklist" class="category">
+        <h2><img src="imgs/Damage.svg"/> Damage</h2>
+      </div>
+      <div id="support-blacklist" class="category">
+        <h2><img src="imgs/Support.svg"/> Support</h2>
+      </div>
+      <div id="flank-blacklist" class="category">
+        <h2><img src="imgs/Flank.svg"/> Flank</h2>
+      </div>
     </div>
 
   </body>
