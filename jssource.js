@@ -39,7 +39,8 @@ const champions = {
 		"Pip",
 		"Seris",
 		"Ying",
-		"Io"
+		"Io",
+		"Corvus"
 	],
 
 	"flank": [
@@ -58,23 +59,13 @@ const champions = {
 
 let blacklist = [];
 
+// eslint-disable-next-line no-unused-vars
 function toggleOverlay () {
-
-	const display =	document.getElementById("overlay").style.display;
 
 	document.getElementById("overlay").style.display = document.getElementById("overlay").style.display === "" ? "block" : "";
 }
 
-function getCookie (name) {
-	const value = `; ${document.cookie}`;
-	const parts = value.split(`; ${name}=`);
-	if (parts.length === 2) {
-		return parts.pop().split(";").shift();
-	}
-	return undefined;
-}
-
-
+// eslint-disable-next-line no-unused-vars
 function toggleBlacklist (el) {
 
 	if  (el.classList.contains("off")) {
@@ -91,13 +82,13 @@ function toggleBlacklist (el) {
 		el.classList.add("off");
 
 		// Add to blacklist
-		blacklist.push(el.id)
+		blacklist.push(el.id);
 	}
 
 	// Store blacklist as cookie
 
-	const string = JSON.stringify(blacklist)
-	document.cookie = `blacklist=${string}; path=/; max-age=31557600`
+	const string = JSON.stringify(blacklist);
+	localStorage.setItem("blacklist", string);
 
 	randomise();
 }
@@ -128,7 +119,7 @@ function randomise () {
 			document.getElementById("profile").src = "imgs/champs/none.jpg";
 
 			// Stop trying to pick a champ
-			return
+			return;
 		}
 	}
 
@@ -173,8 +164,8 @@ function randomise () {
 (function () {
 
 	// Load blacklist from cookies
-	if (getCookie("blacklist") !== undefined) {
-		blacklist = JSON.parse(getCookie("blacklist"));
+	if (localStorage.getItem("blacklist")) {
+		blacklist = JSON.parse(localStorage.getItem("blacklist"));
 	}
 
 
@@ -193,7 +184,7 @@ function randomise () {
 
 			template.id = champ;
 
-			template.style.backgroundImage = `url(imgs/champs/${champ.toLowerCase().replace(" ", "-").replace("'", "\\'")}.jpg)`
+			template.style.backgroundImage = `url(imgs/champs/${champ.toLowerCase().replace(" ", "-").replace("'", "\\'")}.jpg)`;
 
 
 			template.children[0].src = `imgs/champs/${champ.toLowerCase().replace(" ", "-")}.jpg`;
@@ -204,7 +195,7 @@ function randomise () {
 				template.classList.add("off");
 			}
 
-			document.getElementById(`${cat}-blacklist`).appendChild(template)
+			document.getElementById(`${cat}-blacklist`).appendChild(template);
 
 		}
 	}
