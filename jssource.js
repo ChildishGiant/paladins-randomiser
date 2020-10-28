@@ -53,7 +53,8 @@ const champions = {
 		"Moji",
 		"Skye",
 		"Talus",
-		"Zhin"
+		"Zhin",
+		"Vora"
 	]
 };
 
