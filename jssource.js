@@ -10,7 +10,8 @@ const champions = {
 		"Raum",
 		"Ruckus",
 		"Terminus",
-		"Torvald"
+		"Torvald",
+		"Yagorath"
 	],
 
 	"damage": [
