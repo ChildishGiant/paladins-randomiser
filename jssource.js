@@ -34,16 +34,16 @@ const champions = {
   ],
 
   support: [
+    'Corvus',
     'Furia',
     'Grohk',
     'Grover',
+    'Io',
     'Jenos',
-    "Mal'Damba",
     'Pip',
     'Seris',
     'Ying',
-    'Io',
-    'Corvus'
+    "Mal'Damba"
   ],
 
   flank: [
@@ -56,8 +56,8 @@ const champions = {
     'Moji',
     'Skye',
     'Talus',
-    'Zhin',
-    'Vora'
+    'Vora',
+    'Zhin'
   ]
 }
 
