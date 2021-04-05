@@ -1,3 +1,5 @@
+/* globals localStorage */
+
 const champions = {
   frontlines: [
     'Ash',
