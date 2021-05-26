@@ -58,6 +58,7 @@ const champions = {
     'Skye',
     'Talus',
     'Zhin',
+    'Vatu',
     'Vora'
   ]
 }
