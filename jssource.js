@@ -44,7 +44,8 @@ const champions = {
     'Seris',
     'Ying',
     'Io',
-    'Corvus'
+    'Corvus',
+    'Rei'
   ],
 
   flank: [

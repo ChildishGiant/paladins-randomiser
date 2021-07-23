@@ -1,0 +1,6 @@
+{
+	"standard.enable": true,
+	"conventionalCommits.scopes": [
+		"champions"
+	]
+}
