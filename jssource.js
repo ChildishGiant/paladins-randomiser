@@ -25,6 +25,7 @@ const champions = {
     'Kinessa',
     'Lian',
     'Octavia',
+    'Saati',
     'Sha Lin',
     'Strix',
     'Tiberius',
