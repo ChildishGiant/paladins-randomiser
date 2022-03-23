@@ -18,6 +18,7 @@ const champions = {
   ],
 
   damage: [
+    'Betty La Bomba',
     'Bomb King',
     'Cassie',
     'Dredge',
@@ -99,6 +100,8 @@ function toggleBlacklist (el) {
   randomise()
 }
 
+const getPath = (champion) => `imgs/champs/${champion.toLowerCase().replaceAll(' ', '-')}.jpg`
+
 function randomise () {
   let pool = []
 
@@ -155,7 +158,7 @@ function randomise () {
       document.getElementById('answer').innerHTML = chosen
 
       // Setting the image
-      document.getElementById('profile').src = `imgs/champs/${chosen.toLowerCase().replace(' ', '-')}.jpg`
+      document.getElementById('profile').src = getPath(chosen)
       break
   }
 }
@@ -179,9 +182,9 @@ function randomise () {
 
       template.id = champ
 
-      template.style.backgroundImage = `url(imgs/champs/${champ.toLowerCase().replace(' ', '-').replace("'", "\\'")}.jpg)`
+      template.style.backgroundImage = `url(${getPath(champ).replaceAll("'", "\\'")})`
 
-      template.children[0].src = `imgs/champs/${champ.toLowerCase().replace(' ', '-')}.jpg`
+      template.children[0].src = getPath(champ)
 
       // Check if disabled
       if (blacklist.includes(champ)) {
