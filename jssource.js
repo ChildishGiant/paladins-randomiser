@@ -44,6 +44,7 @@ const champions = {
     'Grover',
     'Io',
     'Jenos',
+    'Lillith',
     "Mal'Damba",
     'Pip',
     'Rei',
