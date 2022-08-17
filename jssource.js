@@ -55,6 +55,7 @@ const champions = {
   flank: [
     'Androxus',
     'Buck',
+    'Caspian',
     'Evie',
     'Koga',
     'Lex',
